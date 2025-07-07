@@ -10,6 +10,6 @@ server.listen(port, () => {
 
 aedes.on('publish', (packet, client) => {
     if (client) {
-        console.log('Mensagem recebida do cliente:', packet.payload.toString())
+        console.log('Mensagem recebida do cliente:', packet.payload.toString(), 'topic:', packet.topic)
     }
 })
